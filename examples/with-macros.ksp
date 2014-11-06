@@ -1,0 +1,11 @@
+on init
+#include "logger.h"
+	declare ui_button $button
+	declare %arr[ 3 ] := ( 1, 2, 3 )
+end on
+
+on ui_control ( $button )
+	LOG( "A message" )
+	LOG_EXP( $button )
+	LOG_ARR( %arr, 3 )
+end on

@@ -1,0 +1,55 @@
+on init
+
+	set_script_title( "LOGGER" )
+	set_ui_height( 8 )
+	make_perfview
+
+	declare ui_label $messages ( 6, 15 )
+	set_text( $messages, "" )
+
+	declare ui_button $save
+	declare ui_button $clear
+
+	declare const $MAX := 1024
+	declare !message[ $MAX ]
+	declare $num := 0
+
+	pgs_create_str_key( LOG_MESSAGE )
+
+	declare $last
+
+end on
+
+{/**
+	Clears all the collected log messages.
+*/}
+on ui_control ( $clear )
+	$clear := 0
+	set_text( $messages, "" )
+	$num := 0
+	while ( $num < $MAX )
+		!message[ $num ] := ""
+		wait( 1 )
+		inc( $num )
+	end while
+	$num := 0
+end on
+
+{/**
+	Allows to save all the collected log messages to a file (as a string array).
+*/}
+on ui_control ( $save )
+	save_array( !message, 0 )
+	$save := 0
+end on
+
+{/**
+	Handles modifications to LOG_MESSAGE pgs
+*/}
+on pgs_changed
+	!message[ $num ] := ms_to_ticks( $KSP_TIMER - $last ) & ": " & pgs_get_str_key_val( LOG_MESSAGE )
+	add_text_line( $messages, !message[ $num ] )
+	$last := $KSP_TIMER
+	$num := ( $num + 1 ) mod $MAX
+end on
+

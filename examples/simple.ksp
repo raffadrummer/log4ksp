@@ -1,0 +1,7 @@
+on init
+	declare ui_button $button
+end on
+
+on ui_control ( $button )
+	pgs_set_str_key_val( LOG_MESSAGE, "HERE I AM" )
+end on
