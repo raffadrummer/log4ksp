@@ -1,11 +1,11 @@
-# log4ksp
+# Log 4 KSP
 
-This repository contains a simple logging system for
+This repository contains a simple *logging system* for
 "[Kontakt](http://www.native-
 instruments.com/en/products/komplete/samplers/kontakt-5/) Scripting Language"
 scripts.
 
-The purpose of a logging system is to enable the programmer to collect
+The purpose of a *logging system* is to enable the programmer to collect
 diagnostic messages (typically used for debugging) produced during script
 execution.
 
@@ -31,7 +31,7 @@ The inclusion of the header file makes possible to use the following *macros*
 	LOG( <message> )
 	LOG_EXP( <expression> )
 	LOG_ARR( <array>, <lenght> )
-   
+
 that allow to, respectively, log:
 
 - a `<message>`,
@@ -46,9 +46,8 @@ To actually test the above example (assuming you are using a GNU/Linux system wh
 	ln -s ../Makefile .
 	ln -s ../logger.h .
 	make with-macros.txt
-    
-and then load the `with-macros.txt` file in one of the script tabs.
 
+and then load the `with-macros.txt` file in one of the script tabs.
 
 
 [![Analytics](https://ga-beacon.appspot.com/UA-49277456-5/log4ksp?pixel)](https://github.com/igrigorik/ga-beacon)
