@@ -22,7 +22,7 @@ As an example, you can load the file [simple.ksp](examples/simple.ksp) in one ta
 
 ## Use with macros
 
-It is possible to use the C preprocessor to both simplify and make more powerful the use of the logging system.
+As explained in [Macros 4 KSP](https://github.com/raffadrummer/macros4ksp) repository, it is possible to use the C preprocessor to both simplify and make more powerful the use of the logging system.
 
 First you need to include the [logger.h](logger.h) *header file* in your KSP script, then you must "compile" it using the C preprocessor; in order to perform this you can use the [Makefile](Makefile).
 
