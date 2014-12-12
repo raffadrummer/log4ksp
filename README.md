@@ -1,8 +1,7 @@
 # Log 4 KSP
 
 This repository contains a simple *logging system* for
-"[Kontakt](http://www.native-
-instruments.com/en/products/komplete/samplers/kontakt-5/) Scripting Language"
+"[Kontakt](http://www.native-instruments.com/en/products/komplete/samplers/kontakt-5/) Scripting Language"
 scripts.
 
 The purpose of a *logging system* is to enable the programmer to collect
