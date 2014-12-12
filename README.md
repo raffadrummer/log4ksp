@@ -49,4 +49,4 @@ To actually test the above example (assuming you are using a GNU/Linux system wh
 and then load the `with-macros.txt` file in one of the script tabs.
 
 
-[![Analytics](https://ga-beacon.appspot.com/UA-49277456-5/log4ksp?pixel)](https://github.com/igrigorik/ga-beacon)
+![Analytics](https://ga-beacon.appspot.com/UA-49277456-5/log4ksp?pixel)
